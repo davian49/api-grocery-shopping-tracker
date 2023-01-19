@@ -1,6 +1,5 @@
 const GroceryItem = require('../model/groceryItem')
 const dynamo = require('./dynamoDB')
-const uniqid = require('uniqid')
 
 // CRUD
 
@@ -13,7 +12,7 @@ function insertNewGroceryItem(newGroceryItem) {
     const params = {
         TableName: 'grocery_items',
         Item: {
-            id: uniqid(),
+            id: newGroceryItem.id,
             name: newGroceryItem.name,
             quantity: newGroceryItem.quantity,
             price: newGroceryItem.price
@@ -26,7 +25,7 @@ function insertNewGroceryItem(newGroceryItem) {
         } else {
             console.log(`Successfully added ${newGroceryItem}`)
         }
-    })
+    }).promise()
 }
 
 // READ
@@ -53,7 +52,7 @@ const getItemByID = (id) => {
                 console.log(`Item with id ${id} was not found`);
             }
         }
-    });
+    }).promise();
 }
 /**
  * Returns list of ALL GroceryItems

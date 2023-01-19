@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const GroceryItem = require('./model/groceryItem');
-const dao = require('./repository/groceryItemDAO')
+const gdao = require('./repository/groceryItemDAO')
 const server = express()
 const PORT = 3000;
 
@@ -15,7 +15,7 @@ server.listen(PORT, () => {
     console.log("Listening on port 3000")
 })
 
-// let item = new GroceryItem('carrots',3,1.15)
+let item = new GroceryItem('oranges',2,2.45)
 
-// dao.insertNewGroceryItem(item)
-dao.getItemByID('4ssiv2zkld2hmxxz')
+gdao.insertNewGroceryItem(item)
+gdao.getItemByID('4ssiv2zkld2hmxxz')
