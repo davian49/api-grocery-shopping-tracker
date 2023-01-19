@@ -1,0 +1,26 @@
+{
+  "name": "api-grocery-shopping-tracker",
+  "version": "1.0.0",
+  "description": "grocery-shopping-tracker is now a full-fledged HTTP-based API!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davian49/api-grocery-shopping-tracker.git"
+  },
+  "author": "Davian C.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davian49/api-grocery-shopping-tracker/issues"
+  },
+  "homepage": "https://github.com/davian49/api-grocery-shopping-tracker#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1297.0",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "uniqid": "^5.4.0"
+  }
+}
